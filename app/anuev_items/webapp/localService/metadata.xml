@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="Qes_Service" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="ListOfAnuevs" EntityType="Qes_Service.ListOfAnuevs"/>
+            </EntityContainer>
+            <EntityType Name="ListOfAnuevs">
+                <Key>
+                    <PropertyRef Name="eid"/>
+                </Key>
+                <Property Name="eid" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="stat" Type="Edm.String" MaxLength="10"/>
+                <Property Name="sus" Type="Edm.String" MaxLength="10"/>
+                <Property Name="rem" Type="Edm.String" MaxLength="10"/>
+                <Property Name="kunnr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="name1" Type="Edm.String" MaxLength="1024"/>
+                <Property Name="vbeln" Type="Edm.String" MaxLength="10"/>
+                <Property Name="posnr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="vornr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="aid" Type="Edm.String" MaxLength="10"/>
+                <Property Name="pernr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="eidatv" Type="Edm.DateTimeOffset"/>
+                <Property Name="eidatb" Type="Edm.DateTimeOffset"/>
+                <Property Name="nl" Type="Edm.String" MaxLength="10"/>
+                <Property Name="dat" Type="Edm.DateTimeOffset"/>
+                <Property Name="smtp1" Type="Edm.String" MaxLength="1024"/>
+                <Property Name="smtp2" Type="Edm.String" MaxLength="1024"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

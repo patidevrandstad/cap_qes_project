@@ -1,6 +1,5 @@
 {
-  "welcomeFile": "/index.html",
-  "authenticationMethod": "route",
+  "authenticationMethod": "none",
   "routes": [
     {
       "source": "^/qes-/(.*)$",
@@ -22,10 +21,23 @@
       "destination": "ui5"
     },
     {
-      "source": "^(.*)$",
+      "source": "^/app/(.*)$",
       "target": "$1",
-      "service": "html5-apps-repo-rt",
+      "localDir": ".",
+      "cacheControl": "no-cache, no-store, must-revalidate",
       "authenticationType": "xsuaa"
-    }
+  },
+  {
+      "source": "^/user-api(.*)",
+      "target": "$1",
+      "service": "sap-approuter-userapi"
+  },
+  {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "srv-api",
+      "csrfProtection": true,
+      "authenticationType": "xsuaa"
+  }
   ]
 }

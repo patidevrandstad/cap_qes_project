@@ -1,5 +1,30 @@
 {
-  "scopes": [],
+  "xsappname": "qes_cap_working",
+"tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.QES_CAP_TESTUSER",
+      "description": "QES_CAP_TESTUSER"
+    }
+  ],
   "attributes": [],
-  "role-templates": []
+  "role-templates": [
+    {
+      "name": "QES_CAP_TESTUSER",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.QES_CAP_TESTUSER"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+        "binding-secret",
+        "x509"
+    ],
+    "redirect-uris": [
+        "https://*.applicationstudio.cloud.sap/**"
+    ]
+}
 }

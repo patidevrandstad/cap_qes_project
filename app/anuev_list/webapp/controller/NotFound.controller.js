@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
     "use strict";
 
-    return BaseController.extend("anuevitems.controller.NotFound", {
+    return BaseController.extend("anuevlist.controller.NotFound", {
 
         /**
          * Navigates to the worklist when the link is pressed

@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="anuevitems.controller.Worklist"
+    controllerName="anuevlist.controller.Worklist"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.f.semantic">

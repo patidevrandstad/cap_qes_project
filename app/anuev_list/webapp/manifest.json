@@ -1,7 +1,7 @@
 {
     "_version": "1.48.0",
     "sap.app": {
-        "id": "anuevitems",
+        "id": "anuevlist",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -13,7 +13,7 @@
         "sourceTemplate": {
             "id": "@sap/generator-fiori:worklist",
             "version": "1.8.3",
-            "toolsId": "adbe1b8d-481c-4208-ac8e-2bc3a1fbb40d"
+            "toolsId": "6350bef2-0836-4477-8749-5cc21cc26c44"
         },
         "dataSources": {
             "mainService": {
@@ -28,12 +28,12 @@
         },
         "crossNavigation": {
             "inbounds": {
-                "anuevitems-inbound": {
+                "anuevlist-inbound": {
                     "signature": {
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "QES_ App",
+                    "semanticObject": "QES_CAP",
                     "action": "display",
                     "title": "{{flpTitle}}",
                     "subTitle": "{{flpSubtitle}}",
@@ -81,7 +81,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "anuevitems.i18n.i18n"
+                    "bundleName": "anuevlist.i18n.i18n"
                 }
             },
             "": {
@@ -102,7 +102,7 @@
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
-                "viewPath": "anuevitems.view",
+                "viewPath": "anuevlist.view",
                 "controlId": "app",
                 "controlAggregation": "pages",
                 "bypassed": {
@@ -152,7 +152,7 @@
             }
         },
         "rootView": {
-            "viewName": "anuevitems.view.App",
+            "viewName": "anuevlist.view.App",
             "type": "XML",
             "async": true,
             "id": "app"

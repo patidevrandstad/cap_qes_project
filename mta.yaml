@@ -35,6 +35,12 @@ modules:
       name: srv-api
       url: ~{srv-url}
   - name: qes_cap_working-auth
+  - name: undefined-destination-service
+    group: destinations
+    properties:
+      forwardAuthToken: false
+      name: ui5
+      url: https://ui5.sap.com
   parameters:
     disk-quota: 256M
     keep-existing-routes: true
@@ -53,9 +59,23 @@ modules:
       - anuevitems.zip
       name: anuevitems
       target-path: resources/
+    - artifacts:
+      - anuevlist.zip
+      name: anuevlist
+      target-path: resources/
 - name: anuevitems
   type: html5
   path: app/anuev_items
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: anuevlist
+  type: html5
+  path: app/anuev_list
   build-parameters:
     build-result: dist
     builder: custom

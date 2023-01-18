@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel, History, formatter) {
     "use strict";
 
-    return BaseController.extend("anuevitems.controller.Object", {
+    return BaseController.extend("anuevlist.controller.Object", {
 
         formatter: formatter,
 

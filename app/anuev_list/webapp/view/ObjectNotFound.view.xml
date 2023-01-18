@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="anuevitems.controller.NotFound"
+    controllerName="anuevlist.controller.NotFound"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
 

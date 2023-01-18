@@ -17,7 +17,8 @@
         "watch-anuev_items": "cds watch --open anuev_items/webapp/index.html?sap-ui-xx-viewCache=false",
         "undeploy": "cf undeploy qes_cap_working --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
-        "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+        "watch-anuev_list": "cds watch --open anuev_list/webapp/index.html?sap-ui-xx-viewCache=false"
     },
     "engines": {
         "node": "^16.15"
@@ -72,10 +73,14 @@
         }
     },
     "sapux": [
-        "app/anuev_items"
+        "app/anuev_items",
+        "app/anuev_list"
     ],
     "devDependencies": {
+        "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
         "@sap/ux-specification": "^1.102.14",
+        "@sapui5/ts-types": "^1.92.2",
+        "eslint": "^7.32.0",
         "rimraf": "^3.0.2"
     }
 }

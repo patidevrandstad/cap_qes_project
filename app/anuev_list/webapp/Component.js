@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (UIComponent, Device, models, ErrorHandler) {
     "use strict";
 
-    return UIComponent.extend("anuevitems.Component", {
+    return UIComponent.extend("anuevlist.Component", {
 
         metadata : {
             manifest: "json"

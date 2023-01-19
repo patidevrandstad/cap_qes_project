@@ -1,31 +1,20 @@
 {
-  "xsappname": "qes_cap_working",
-"tenant-mode": "dedicated",
-  "scopes": [
-    {
-      "name": "$XSAPPNAME.QES_CAP_TESTUSER",
-      "description": "QES_CAP_TESTUSER"
-    }
-  ],
-  "attributes": [],
-  "role-templates": [
-    {
-      "name": "QES_CAP_TESTUSER",
-      "description": "generated",
-      "scope-references": [
-        "$XSAPPNAME.QES_CAP_TESTUSER"
-      ],
-      "attribute-references": []
-    }
-  ],
-  "oauth2-configuration": {
-    "credential-types": [
-        "binding-secret",
-        "x509"
+    "xsappname": "myhanaapp",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+      {
+        "name": "uaa.user",
+        "description": "UAA"
+      }
     ],
-    "redirect-uris": [
-        "https://*.applicationstudio.cloud.sap/**",
-        "http://localhost:5000/**"
+    "role-templates": [
+      {
+        "name": "Token_Exchange",
+        "description": "UAA",
+        "scope-references": [
+          "uaa.user"
+        ]
+      }
     ]
-}
-}
+  }

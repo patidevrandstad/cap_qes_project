@@ -24,6 +24,5 @@
       "csrfProtection": true,
       "authenticationType": "xsuaa"
     }
-  ],
-  "welcomeFile": "/anuevlist"
+  ]
 }
